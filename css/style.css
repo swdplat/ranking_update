@@ -136,6 +136,7 @@ body {
 .score-number {
   color: #000000; /* 數字顏色，可以調整為您圖片中的顏色 */
   margin: 0 5px; /* 數字與文字間距 */
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 /* Answer Buttons */
@@ -165,6 +166,7 @@ body {
   white-space: nowrap; /* 防止按鈕內文字換行 */
   overflow: hidden; /* 隱藏溢出文字 */
   text-overflow: ellipsis; /* 溢出文字顯示省略號 */
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .star-icon {
@@ -172,6 +174,12 @@ body {
   font-size: 1.2em;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   flex-shrink: 0; /* 防止星星被壓縮 */
+  text-align: center;
+  display: contents;
+}
+
+.star-icon img {
+  width: 25px;
 }
 
 /* 響應式設計 */
