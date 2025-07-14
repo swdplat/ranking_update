@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>排行榜左右輪播</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .game-container {
+      width: 100%;
+      max-width: 1024px;
+      overflow: hidden;
+      position: relative;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: margin-left 0.5s ease;
+      width: 100%;
+    }
+
+    .section_rank {
+      flex: 0 0 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .ranking-card_2,
+    .ranking-card_3,
+    .ranking-card_4,
+    .ranking-card_5,
+    .ranking-card_6 {
+      width: 180px;
+      margin: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+
+    .ranking-badge_2,
+    .ranking-badge_3,
+    .ranking-badge_4,
+    .ranking-badge_5,
+    .ranking-badge_6 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .rank-img_2 img,
+    .rank-img_3 img {
+      width: 100px;
+    }
+
+    .info-container_2,
+    .info-container_3,
+    .info-container_4,
+    .info-container_5,
+    .info-container_6 {
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    .button-container_2,
+    .button-container_3,
+    .button-container_4,
+    .button-container_5,
+    .button-container_6 {
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .button-number_2,
+    .button-number_3,
+    .button-number_4,
+    .button-number_5,
+    .button-number_6 {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .answer-button_2,
+    .answer-button_3,
+    .answer-button_4,
+    .answer-button_5,
+    .answer-button_6 {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="game-container">
+    <div class="carousel-track">
+      <!-- 頁面一 -->
+      <div class="section_rank">
+        <div class="ranking-card_2">
+          <div class="ranking-badge_2">
+            <div class="rank-img_2">
+              <img src="./image/top4-removebg.png" alt="" />
+            </div>
+          </div>
+          <div class="info-container_2">
+            <div class="phone-number_2">0912345789</div>
+            <div style="border-bottom: 2px solid #a38995"></div>
+            <div class="store-name_2">台北忠孝東路 - 家樂福超市</div>
+          </div>
+          <div class="button-container_2">
+            <div class="button-number_2">49</div>
+            <div class="answer-button_2">答對題數</div>
+          </div>
+        </div>
+        <!-- 其他排名卡片... -->
+        <!-- 略過為簡潔，可重複新增5個 -->
+      </div>
+
+      <!-- 頁面二 -->
+      <div class="section_rank">
+        <div class="ranking-card_3">
+          <div class="ranking-badge_3">
+            <div class="rank-img_3">
+              <img src="./image/top5-removebg.png" alt="" />
+            </div>
+          </div>
+          <div class="info-container_3">
+            <div class="phone-number_3">0912345789</div>
+            <div style="border-bottom: 2px solid #9da06e"></div>
+            <div class="store-name_3">台北忠孝東路 - 家樂福超市</div>
+          </div>
+          <div class="button-container_3">
+            <div class="button-number_3">49</div>
+            <div class="answer-button_3">答對題數</div>
+          </div>
+        </div>
+        <!-- 其他排名卡片... -->
+        <!-- 略過為簡潔，可重複新增5個 -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      const $track = $('.carousel-track');
+      const $pages = $('.section_rank');
+      const pageCount = $pages.length;
+      const containerWidth = $('.game-container').outerWidth();
+      let currentIndex = 0;
+
+      if (pageCount > 1) {
+        setInterval(() => {
+          currentIndex++;
+          if (currentIndex >= pageCount) {
+            currentIndex = 0;
+          }
+          const offset = -currentIndex * containerWidth;
+          $track.css('margin-left', offset + 'px');
+        }, 3000);
+      }
+    });
+  </script>
+
+</body>
+</html>

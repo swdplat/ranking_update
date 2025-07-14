@@ -1,0 +1,309 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  border: 5px solid #e0c279;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* 網格背景 (模擬) */
+.game-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #f5f5f5 1px, transparent 1px),
+    linear-gradient(to bottom, #f5f5f5 1px, transparent 1px);
+  background-size: 20px 20px; /* 網格大小 */
+  opacity: 0.7; /* 網格透明度 */
+  z-index: 0; /* 確保在內容下方 */
+}
+
+.game-container > * {
+  position: relative; /* 確保內容在網格上方 */
+  z-index: 1;
+}
+
+/* Ranking Section */
+.ranking-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px; /* 調整大小 */
+  /* height: 120px; 調整大小 */
+  /* margin-bottom: 10px; 與下方文字的間距 */
+}
+
+.game-container .ranking-section .rank-img img {
+  width: 600px;
+}
+
+.number-circle {
+  width: 100px;
+  height: 100px;
+  background-color: #8b4513; /* 咖啡色圓圈 */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ffd700; /* 金色邊框 */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2; /* 確保在麥穗上方 */
+}
+
+.number {
+  font-size: 4em;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1; /* 調整行高讓數字置中 */
+}
+
+.ranking-text {
+  font-size: 0.8em;
+  color: #fff;
+  margin-top: -5px; /* 微調位置 */
+}
+
+.crown-icon {
+  position: absolute;
+  top: -30px; /* 調整皇冠位置 */
+  font-size: 3em; /* 調整皇冠大小 */
+  color: gold;
+  z-index: 3; /* 確保在圓圈上方 */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 麥穗裝飾 - 使用偽元素或背景圖片更佳，這裡簡單示範 */
+.laurel-left,
+.laurel-right {
+  position: absolute;
+  width: 100px; /* 麥穗寬度 */
+  height: 80px; /* 麥穗高度 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* 這裡需要替換成麥穗圖片的 URL */
+  /* 範例圖片，請替換成您自己的路徑或更可靠的CDN */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Laurel_Wreath_Right.svg");
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* 確保在數字圓圈下方 */
+}
+
+.laurel-left {
+  left: 0;
+  transform: translateY(-50%) rotateY(180deg); /* 翻轉左側麥穗 */
+}
+
+.laurel-right {
+  right: 0;
+}
+
+/* Question Text */
+.question-text {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #8e680e;
+  margin-bottom: 10px; /* 與下方按鈕的間距 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* 防止文字換行 */
+}
+
+.score-number {
+  color: #000000; /* 數字顏色，可以調整為您圖片中的顏色 */
+  margin: 0 5px; /* 數字與文字間距 */
+}
+
+/* Answer Buttons */
+.answer-button {
+  width: 100%; /* 按鈕寬度 */
+  max-width: 750px; /* 限制按鈕最大寬度 */
+  background-color: #ffdead; /* 按鈕背景色 */
+  background: linear-gradient(to top, #eac183, #ffffff);
+  border: 3px solid #e0c279; /* 按鈕邊框 */
+  border-radius: 50px;
+  padding: 5px 20px;
+  margin-bottom: 20px; /* 按鈕間距 */
+  display: flex;
+  justify-content: space-between; /* 星星和內容分佈兩側 */
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000; /* 文字顏色 */
+  /* cursor: pointer; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: center; /* 確保按鈕內容居中 */
+}
+
+.button-content {
+  flex-grow: 1; /* 讓內容佔據剩餘空間，推開星星 */
+  text-align: center;
+  white-space: nowrap; /* 防止按鈕內文字換行 */
+  overflow: hidden; /* 隱藏溢出文字 */
+  text-overflow: ellipsis; /* 溢出文字顯示省略號 */
+}
+
+.star-icon {
+  color: #ffd700; /* 星星顏色 */
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* 防止星星被壓縮 */
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .body {
+    padding: 20px;
+  }
+
+  .game-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .ranking-section {
+    width: 200px;
+    height: 240px;
+    margin-bottom: 0px;
+  }
+
+  .game-container .ranking-section .rank-img {
+  }
+
+  .game-container .ranking-section .rank-img img {
+    width: 500px;
+  }
+
+  .number-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .number {
+    font-size: 3em;
+  }
+
+  .ranking-text {
+    font-size: 0.7em;
+  }
+
+  .crown-icon {
+    top: -25px;
+    font-size: 2.5em;
+  }
+
+  .laurel-left,
+  .laurel-right {
+    width: 80px;
+    height: 60px;
+  }
+
+  .question-text {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .score-number {
+    margin: 0 3px;
+  }
+
+  .answer-button {
+    padding: 12px 15px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .star-icon {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .body {
+    padding: 20px;
+  }
+
+  .game-container {
+    padding: 50px 15px 15px 15px;
+    border-radius: 10px;
+  }
+
+  .ranking-section {
+    width: 180px;
+    height: 90px;
+    margin-bottom: 25px;
+  }
+
+  .game-container .ranking-section .rank-img img {
+    width: 350px;
+  }
+
+  .number-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .number {
+    font-size: 2.5em;
+  }
+
+  .ranking-text {
+    font-size: 0.6em;
+  }
+
+  .crown-icon {
+    top: -20px;
+    font-size: 2em;
+  }
+
+  .laurel-left,
+  .laurel-right {
+    width: 70px;
+    height: 50px;
+  }
+
+  .question-text {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .score-number {
+    margin: 0 2px;
+  }
+
+  .answer-button {
+    padding: 10px 12px;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  .star-icon {
+    font-size: 0.9em;
+  }
+}
