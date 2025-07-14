@@ -145,7 +145,7 @@ body {
   border: 3px solid #e0c279; /* 按鈕邊框 */
   border-radius: 50px;
   padding: 12px 20px;
-  margin-bottom: 20px; /* 按鈕間距 */
+  margin-bottom: 30px; /* 按鈕間距 */
   display: flex;
   justify-content: space-between; /* 星星和內容分佈兩側 */
   align-items: center;
