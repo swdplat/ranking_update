@@ -114,7 +114,7 @@ body {
 
 /* Question Text */
 .question-text {
-  font-size: 2.5em;
+  font-size: 4.5em;
   font-weight: bold;
   color: #8e680e;
   margin-bottom: 10px; /* 與下方按鈕的間距 */
@@ -150,6 +150,7 @@ body {
 }
 
 .button-content {
+  font-size: 1.5em;
   flex-grow: 1; /* 讓內容佔據剩餘空間，推開星星 */
   text-align: center;
   white-space: nowrap; /* 防止按鈕內文字換行 */
@@ -173,9 +174,6 @@ body {
 
 /* 響應式設計 */
 @media (max-width: 768px) {
-  .body {
-    padding: 20px;
-  }
 
   .game-container {
     padding: 20px;
@@ -220,7 +218,7 @@ body {
   }
 
   .question-text {
-    font-size: 2em;
+    font-size: 4.5em;
     margin-bottom: 10px;
   }
 
