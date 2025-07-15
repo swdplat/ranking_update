@@ -63,7 +63,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* overflow: hidden; */
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
   height: 180px; /* Adjust as needed */
   position: relative;
   border: 3px solid #f2c989;
