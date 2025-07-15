@@ -6,201 +6,332 @@
     <title>指定名次區間 - 6~10人的排行榜，超過10人3s輪播一次</title>
     <link rel="stylesheet" href="./css/ranking_update.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
       rel="stylesheet"
     />
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-  <body style="padding: 20px">
-    <div class="game-container">
-      <div class="carousel-track">
-        <div class="section_rank">
-          <div class="ranking-card_2">
-            <div class="ranking-badge_2">
-              <div class="rank-img_2">
-                <img src="./image/top4-removebg.png" alt="" />
+  <body>
+    <div class="game-rankbg">
+      <div class="game-container">
+        <div class="carousel-track">
+          <div class="section_rank">
+            <div class="ranking-card_2">
+              <div class="ranking-badge_2">
+                <div class="number-style" id="">1</div>
+              </div>
+              <div class="info-container_2">
+                <div class="phone-number_2" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_2">
+                <div class="button-number_2" id="">49</div>
+                <div class="answer-button_2">答對題數</div>
               </div>
             </div>
-            <div class="info-container_2">
-              <div class="phone-number_2" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #a38995"></div>
-              <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
+            <div class="ranking-card_3">
+              <div class="ranking-badge_3">
+                <div class="number-style_2" id="">2</div>
+              </div>
+              <div class="info-container_3">
+                <div class="phone-number_3" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_3">
+                <div class="button-number_3" id="">49</div>
+                <div class="answer-button_3">答對題數</div>
+              </div>
             </div>
-            <div class="button-container_2">
-              <div class="button-number_2" id="">49</div>
-              <div class="answer-button_2">答對題數</div>
+            <div class="ranking-card_4">
+              <div class="ranking-badge_4">
+                <div class="number-style" id="">3</div>
+              </div>
+              <div class="info-container_4">
+                <div class="phone-number_4" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_4">
+                <div class="button-number_4" id="">49</div>
+                <div class="answer-button_4">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">4</div>
+              </div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_6">
+              <div class="ranking-badge_6">
+                <div class="number-style" id="">5</div>
+              </div>
+              <div class="info-container_6">
+                <div class="phone-number_6" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_6" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_6">
+                <div class="button-number_6" id="">49</div>
+                <div class="answer-button_6">答對題數</div>
+              </div>
             </div>
           </div>
-          <div class="ranking-card_3">
-            <div class="ranking-badge_3">
-              <div class="rank-img_3">
-                <img src="./image/top5-removebg.png" alt="" />
+
+          <div class="section_rank">
+            <div class="ranking-card_3">
+              <div class="ranking-badge_3">
+                <div class="number-style_2" id="">6</div>
+              </div>
+              <div class="info-container_3">
+                <div class="phone-number_3" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_3">
+                <div class="button-number_3" id="">49</div>
+                <div class="answer-button_3">答對題數</div>
               </div>
             </div>
-            <div class="info-container_3">
-              <div class="phone-number_3" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #9da06e"></div>
-              <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_3">
-              <div class="button-number_3" id="">49</div>
-              <div class="answer-button_3">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_4">
-            <div class="ranking-badge_4">
-              <div class="rank-img_2">
-                <img src="./image/top4-removebg.png" alt="" />
+            <div class="ranking-card_2">
+              <div class="ranking-badge_2">
+                <div class="number-style" id="">7</div>
+              </div>
+              <div class="info-container_2">
+                <div class="phone-number_2" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_2">
+                <div class="button-number_2" id="">49</div>
+                <div class="answer-button_2">答對題數</div>
               </div>
             </div>
-            <div class="info-container_4">
-              <div class="phone-number_4" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #a38995"></div>
-              <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_4">
-              <div class="button-number_4" id="">49</div>
-              <div class="answer-button_4">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_5">
-            <div class="ranking-badge_5">
-              <div class="rank-img_2">
-                <img src="./image/top5-removebg.png" alt="" />
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">8</div>
+              </div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
               </div>
             </div>
-            <div class="info-container_5">
-              <div class="phone-number_5" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #9da06e"></div>
-              <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_5">
-              <div class="button-number_5" id="">49</div>
-              <div class="answer-button_5">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_6">
-            <div class="ranking-badge_6">
-              <div class="rank-img_2">
-                <img src="./image/top4-removebg.png" alt="" />
+            <div class="ranking-card_4">
+              <div class="ranking-badge_4">
+                <div class="number-style" id="">9</div>
+              </div>
+              <div class="info-container_4">
+                <div class="phone-number_4" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_4">
+                <div class="button-number_4" id="">49</div>
+                <div class="answer-button_4">答對題數</div>
               </div>
             </div>
-            <div class="info-container_6">
-              <div class="phone-number_6" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #a38995"></div>
-              <div class="store-name_6" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_6">
-              <div class="button-number_6" id="">49</div>
-              <div class="answer-button_6">答對題數</div>
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">10</div>
+              </div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="carousel-track" style="display: none;">
+          <div class="section_rank">
+            <div class="ranking-card_2">
+              <div class="ranking-badge_2">
+                <div class="number-style" id="">11</div>
+              </div>
+              <div class="info-container_2">
+                <div class="phone-number_2" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_2">
+                <div class="button-number_2" id="">49</div>
+                <div class="answer-button_2">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_3">
+              <div class="ranking-badge_3">
+                <div class="number-style_2" id="">12</div>
+              </div>
+              <div class="info-container_3">
+                <div class="phone-number_3" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_3">
+                <div class="button-number_3" id="">49</div>
+                <div class="answer-button_3">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_4">
+              <div class="ranking-badge_4">
+                <div class="number-style" id="">13</div>
+              </div>
+              <div class="info-container_4">
+                <div class="phone-number_4" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_4">
+                <div class="button-number_4" id="">49</div>
+                <div class="answer-button_4">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">14</div>
+              </div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
+              </div>
+            </div>
+            <div class="ranking-card_6">
+              <div class="ranking-badge_6">
+                <div class="number-style" id="">15</div>
+              </div>
+              <div class="info-container_6">
+                <div class="phone-number_6" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_6" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_6">
+                <div class="button-number_6" id="">49</div>
+                <div class="answer-button_6">答對題數</div>
+              </div>
+            </div>
+          </div>
 
-        <div class="section_rank">
-          <div class="ranking-card_3">
-            <div class="ranking-badge_3">
-              <div class="rank-img_3">
-                <img src="./image/top5-removebg.png" alt="" />
+          <div class="section_rank">
+            <div class="ranking-card_3">
+              <div class="ranking-badge_3">
+                <div class="number-style_2" id="">16</div>
+              </div>
+              <div class="info-container_3">
+                <div class="phone-number_3" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_3">
+                <div class="button-number_3" id="">49</div>
+                <div class="answer-button_3">答對題數</div>
               </div>
             </div>
-            <div class="info-container_3">
-              <div class="phone-number_3" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #9da06e"></div>
-              <div class="store-name_3" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_3">
-              <div class="button-number_3" id="">49</div>
-              <div class="answer-button_3">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_2">
-            <div class="ranking-badge_2">
-              <div class="rank-img_2">
-                <img src="./image/top4-removebg.png" alt="" />
+            <div class="ranking-card_2">
+              <div class="ranking-badge_2">
+                <div class="number-style" id="">17</div>
+              </div>
+              <div class="info-container_2">
+                <div class="phone-number_2" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_2">
+                <div class="button-number_2" id="">49</div>
+                <div class="answer-button_2">答對題數</div>
               </div>
             </div>
-            <div class="info-container_2">
-              <div class="phone-number_2" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #a38995"></div>
-              <div class="store-name_2" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_2">
-              <div class="button-number_2" id="">49</div>
-              <div class="answer-button_2">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_5">
-            <div class="ranking-badge_5">
-              <div class="rank-img_2">
-                <img src="./image/top5-removebg.png" alt="" />
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">18</div>
+              </div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
               </div>
             </div>
-            <div class="info-container_5">
-              <div class="phone-number_5" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #9da06e"></div>
-              <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_5">
-              <div class="button-number_5" id="">49</div>
-              <div class="answer-button_5">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_4">
-            <div class="ranking-badge_4">
-              <div class="rank-img_2">
-                <img src="./image/top4-removebg.png" alt="" />
+            <div class="ranking-card_4">
+              <div class="ranking-badge_4">
+                <div class="number-style" id="">19</div>
+              </div>
+              <div class="info-container_4">
+                <div class="phone-number_4" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #a38995"></div>
+                <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_4">
+                <div class="button-number_4" id="">49</div>
+                <div class="answer-button_4">答對題數</div>
               </div>
             </div>
-            <div class="info-container_4">
-              <div class="phone-number_4" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #a38995"></div>
-              <div class="store-name_4" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_4">
-              <div class="button-number_4" id="">49</div>
-              <div class="answer-button_4">答對題數</div>
-            </div>
-          </div>
-          <div class="ranking-card_5">
-            <div class="ranking-badge_5">
-              <div class="rank-img_2">
-                <img src="./image/top5-removebg.png" alt="" />
+            <div class="ranking-card_5">
+              <div class="ranking-badge_5">
+                <div class="number-style_2" id="">20</div>
               </div>
-            </div>
-            <div class="info-container_5">
-              <div class="phone-number_5" id="">0912345789</div>
-              <div style="border-bottom: 2px solid #9da06e"></div>
-              <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
-            </div>
-            <div class="button-container_5">
-              <div class="button-number_5" id="">49</div>
-              <div class="answer-button_5">答對題數</div>
+              <div class="info-container_5">
+                <div class="phone-number_5" id="">0912345789</div>
+                <div style="border-bottom: 2px solid #9da06e"></div>
+                <div class="store-name_5" id="">台北忠孝東路 - 家樂福超市</div>
+              </div>
+              <div class="button-container_5">
+                <div class="button-number_5" id="">49</div>
+                <div class="answer-button_5">答對題數</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- <script>
+    <script>
       $(document).ready(function () {
-        const $track = $(".carousel-track");
-        const $pages = $(".section_rank");
-        const pageCount = $pages.length;
-        const containerWidth = $(".game-container").outerWidth();
-        let currentIndex = 0;
+        const $tracks = $(".carousel-track");
+        let index = 0;
 
-        if (pageCount > 1) {
-          setInterval(() => {
-            currentIndex++;
-            if (currentIndex >= pageCount) {
-              currentIndex = 0;
-            }
-            const offset = -currentIndex * containerWidth;
-            $track.css("margin-left", offset + "px");
-          }, 3000);
-        }
+        // 初始化：只顯示第一個
+        $tracks.hide().eq(index).show();
+
+        // 每 3 秒切換一次
+        setInterval(function () {
+          $tracks.eq(index).hide();
+          index = (index + 1) % $tracks.length;
+          $tracks.eq(index).show();
+        }, 3000); // 切換間隔可調整
       });
-    </script> -->
+    </script>
   </body>
 </html>

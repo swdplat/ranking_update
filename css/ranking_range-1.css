@@ -54,9 +54,9 @@ body {
   margin-top: 15px;
 }
 
-.game-container .ranking-section .rank-img img {
+/* .game-container .ranking-section .rank-img img {
   width: 1170px;
-}
+} */
 
 .number-circle {
   width: 100px;
@@ -103,8 +103,6 @@ body {
   height: 80px; /* 麥穗高度 */
   background-size: contain;
   background-repeat: no-repeat;
-  /* 這裡需要替換成麥穗圖片的 URL */
-  /* 範例圖片，請替換成您自己的路徑或更可靠的CDN */
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Laurel_Wreath_Right.svg");
   top: 50%;
   transform: translateY(-50%);
@@ -122,7 +120,7 @@ body {
 
 /* Question Text */
 .question-text {
-  font-size: 6.5em;
+  font-size: 5.5em;
   font-weight: bold;
   color: #8e680e;
   margin-bottom: 10px; /* 與下方按鈕的間距 */
@@ -147,18 +145,18 @@ body {
   padding: 12px 20px;
   margin-bottom: 30px; /* 按鈕間距 */
   display: flex;
-  justify-content: space-between; /* 星星和內容分佈兩側 */
+  justify-content: space-between; 
   align-items: center;
   font-size: 1.5em;
   font-weight: bold;
-  color: #000000; /* 文字顏色 */
-  /* cursor: pointer; */
+  color: #000000; 
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  text-align: center; /* 確保按鈕內容居中 */
+  text-align: center; 
 }
 
 .button-content {
-  font-size: 2.5em;
+  font-size: 2em;
   flex-grow: 1; /* 讓內容佔據剩餘空間，推開星星 */
   text-align: center;
   white-space: nowrap; /* 防止按鈕內文字換行 */
@@ -192,9 +190,6 @@ body {
     width: 200px;
     height: 240px;
     margin-bottom: 0px;
-  }
-
-  .game-container .ranking-section .rank-img {
   }
 
   .game-container .ranking-section .rank-img img {

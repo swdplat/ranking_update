@@ -6,50 +6,37 @@ body {
   min-height: 100vh;
   background-color: #f0f0f0;
   font-family: "Arial", sans-serif;
-  padding: 20px;
   box-sizing: border-box;
+}
+
+.game-rankbg {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-image: url(../image/rank-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  align-content: center;
 }
 
 .game-container {
   width: 100%;
-  max-width: 1300px;
-  background-color: #fff;
-  border: 5px solid #e0c279;
   border-radius: 20px;
   padding: 30px 30px 30px 90px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
 }
 
-/* 網格背景 (模擬) */
-.game-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.carousel-track {
+  display: flex;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to right, #f5f5f5 1px, transparent 1px),
-    linear-gradient(to bottom, #f5f5f5 1px, transparent 1px);
-  background-size: 20px 20px; /* 網格大小 */
-  opacity: 0.7; /* 網格透明度 */
-  z-index: 0; /* 確保在內容下方 */
-}
-
-.game-container > * {
-  position: relative; /* 確保內容在網格上方 */
-  z-index: 1;
-}
-
-.carousel-track{
-          display: flex;
-      transition: margin-left 0.5s ease;
-      width: 100%;
+  justify-content: center;
 }
 
 /* Ranking Section */
@@ -58,9 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 250px; /* 調整大小 */
-  /* height: 120px; 調整大小 */
-  /* margin-bottom: 10px; 與下方文字的間距 */
+  width: 250px;
 }
 
 .game-container .ranking-section .rank-img img {
@@ -72,8 +57,8 @@ body {
   width: 100%;
   max-width: 1100px;
   margin-top: 50px;
-  /* display: flex; */
-  justify-content: space-between;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -92,21 +77,21 @@ body {
   display: flex;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* overflow: hidden; */
-  width: 100%;
-  max-width: 500px;
-  height: 100px; /* Adjust as needed */
+  width: 90%;
+  height: 120px; /* Adjust as needed */
   position: relative;
   border: 3px solid #a38995;
-  background-image: linear-gradient(to top, #ffd1e7, #ffffff);
-  margin-bottom: 70px;
+  background-image: linear-gradient(to top, #e3d8e7, #ffffff);
+  margin-bottom: 30px;
 }
 
 .ranking-badge_2 {
-  width: 100px;
-  height: 130px;
-  background: linear-gradient(to bottom, #d2b380, #c4a16b);
-  border-radius: 50%;
+  background-image: url(../image/ranking_pink.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,13 +99,18 @@ body {
   color: #5a3c1e;
   font-weight: 700;
   position: relative;
-  left: -20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  bottom: 15px;
+  right: 40px;
+  bottom: 20px;
 }
 
-.rank-img_2 img {
-  width: 180px;
+.number-style {
+  font-size: 4em;
+  color: #8f7286;
+}
+
+.number-style_2 {
+  font-size: 4em;
+  color: #93955e;
 }
 
 .info-container_2 {
@@ -133,7 +123,7 @@ body {
 }
 
 .phone-number_2 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 400;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -141,7 +131,7 @@ body {
 }
 
 .store-name_2 {
-  font-size: 20px;
+  font-size: 1.6em;
   color: #000;
   font-weight: 400;
   padding-left: 15px;
@@ -159,7 +149,7 @@ body {
 }
 
 .button-number_2 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   color: #fff;
   text-align: center;
 }
@@ -184,21 +174,21 @@ body {
   display: flex;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* overflow: hidden; */
-  width: 100%;
-  max-width: 500px;
-  height: 100px; /* Adjust as needed */
+  width: 90%;
+  height: 120px; /* Adjust as needed */
   position: relative;
   border: 3px solid #9da06e;
-  background-image: linear-gradient(to top, #cdd194, #ffffff);
-  margin-bottom: 70px;
+  background-image: linear-gradient(to top, #e6eab5, #ffffff);
+  margin-bottom: 30px;
 }
 
 .ranking-badge_3 {
-  width: 100px;
-  height: 130px;
-  background: linear-gradient(to bottom, #d2b380, #c4a16b);
-  border-radius: 50%;
+  background-image: url(../image/ranking_green.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,13 +196,8 @@ body {
   color: #5a3c1e;
   font-weight: 700;
   position: relative;
-  left: -20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  bottom: 15px;
-}
-
-.rank-img_3 img {
-  width: 180px;
+  right: 40px;
+  bottom: 20px;
 }
 
 .info-container_3 {
@@ -220,12 +205,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding-left: 30px; Space from the badge */
   color: #333;
 }
 
 .phone-number_3 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 400;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -233,7 +217,7 @@ body {
 }
 
 .store-name_3 {
-  font-size: 20px;
+  font-size: 1.6em;
   color: #000;
   font-weight: 400;
   padding-left: 15px;
@@ -251,14 +235,14 @@ body {
 }
 
 .button-number_3 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   color: #fff;
   text-align: center;
 }
 
 .answer-button_3 {
-    background-color: #dbdeab;
-    color: #909362;
+  background-color: #dbdeab;
+  color: #909362;
   border: none;
   padding: 0px 15px;
   border-radius: 5px;
@@ -276,20 +260,21 @@ body {
   display: flex;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  height: 100px;
+  width: 90%;
+  height: 120px;
   position: relative;
   border: 3px solid #a38995;
-  background-image: linear-gradient(to top, #ffd1e7, #ffffff);
-  margin-bottom: 70px;
+  background-image: linear-gradient(to top, #e3d8e7, #ffffff);
+  margin-bottom: 30px;
 }
 
 .ranking-badge_4 {
-  width: 100px;
-  height: 130px;
-  background: linear-gradient(to bottom, #d2b380, #c4a16b);
-  border-radius: 50%;
+  background-image: url(../image/ranking_pink.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,13 +282,8 @@ body {
   color: #5a3c1e;
   font-weight: 700;
   position: relative;
-  left: -20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  bottom: 15px;
-}
-
-.rank-img_4 img {
-  width: 180px;
+  right: 40px;
+  bottom: 20px;
 }
 
 .info-container_4 {
@@ -316,7 +296,7 @@ body {
 }
 
 .phone-number_4 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 400;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -324,7 +304,7 @@ body {
 }
 
 .store-name_4 {
-  font-size: 20px;
+  font-size: 1.6em;
   color: #000;
   font-weight: 400;
   padding-left: 15px;
@@ -342,7 +322,7 @@ body {
 }
 
 .button-number_4 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   color: #fff;
   text-align: center;
 }
@@ -367,21 +347,21 @@ body {
   display: flex;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* overflow: hidden; */
-  width: 100%;
-  max-width: 500px;
-  height: 100px; /* Adjust as needed */
+  width: 90%;
+  height: 120px; /* Adjust as needed */
   position: relative;
   border: 3px solid #9da06e;
-  background-image: linear-gradient(to top, #cdd194, #ffffff);
-  margin-bottom: 70px;
+  background-image: linear-gradient(to top, #e6eab5, #ffffff);
+  margin-bottom: 30px;
 }
 
 .ranking-badge_5 {
-  width: 100px;
-  height: 130px;
-  background: linear-gradient(to bottom, #d2b380, #c4a16b);
-  border-radius: 50%;
+  background-image: url(../image/ranking_green.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -389,13 +369,8 @@ body {
   color: #5a3c1e;
   font-weight: 700;
   position: relative;
-  left: -20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  bottom: 15px;
-}
-
-.rank-img_5 img {
-  width: 180px;
+  right: 40px;
+  bottom: 20px;
 }
 
 .info-container_5 {
@@ -408,7 +383,7 @@ body {
 }
 
 .phone-number_5 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 400;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -416,7 +391,7 @@ body {
 }
 
 .store-name_5 {
-  font-size: 20px;
+  font-size: 1.6em;
   color: #000;
   font-weight: 400;
   padding-left: 15px;
@@ -434,7 +409,7 @@ body {
 }
 
 .button-number_5 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   color: #fff;
   text-align: center;
 }
@@ -455,25 +430,25 @@ body {
   height: 24px;
 }
 
-
 .ranking-card_6 {
   display: flex;
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-  height: 100px;
+  width: 90%;
+  height: 120px;
   position: relative;
   border: 3px solid #a38995;
-  background-image: linear-gradient(to top, #ffd1e7, #ffffff);
-  margin-bottom: 70px;
+  background-image: linear-gradient(to top, #e3d8e7, #ffffff);
+  margin-bottom: 30px;
 }
 
 .ranking-badge_6 {
-  width: 100px;
-  height: 130px;
-  background: linear-gradient(to bottom, #d2b380, #c4a16b);
-  border-radius: 50%;
+  background-image: url(../image/ranking_pink.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -481,13 +456,8 @@ body {
   color: #5a3c1e;
   font-weight: 700;
   position: relative;
-  left: -20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-  bottom: 15px;
-}
-
-.rank-img_6 img {
-  width: 180px;
+  right: 40px;
+  bottom: 20px;
 }
 
 .info-container_6 {
@@ -500,7 +470,7 @@ body {
 }
 
 .phone-number_6 {
-  font-size: 20px;
+  font-size: 2em;
   font-weight: 400;
   margin-bottom: 5px;
   letter-spacing: 2px;
@@ -508,7 +478,7 @@ body {
 }
 
 .store-name_6 {
-  font-size: 20px;
+  font-size: 1.6em;
   color: #000;
   font-weight: 400;
   padding-left: 15px;
@@ -526,7 +496,7 @@ body {
 }
 
 .button-number_6 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   color: #fff;
   text-align: center;
 }
@@ -549,10 +519,10 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .game-container{
-        display: block;
-    }
-    
+  .game-container {
+    display: block;
+  }
+
   .game-container .ranking-section .rank-img img {
     width: 600px;
   }
